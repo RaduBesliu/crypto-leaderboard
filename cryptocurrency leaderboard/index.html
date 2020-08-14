@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <title>Crypto Leaderboard</title>
+</head>
+<body>
+    <div class="container text-center mb-5">
+        <h1>Crypto Leaderboard</h1>
+    </div>
+    <div class="container mb-3 text-center">
+        <button type="button" id="select-range" class="btn btn-info btn-lg" data-toggle="modal" data-target="#rangeModal">Select range</button>
+        <!-- Modal -->
+        <div class="modal fade" id="rangeModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Choose range</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="min-range">Mininum</label>
+                            <input type="number" id="min-range" placeholder="1" class>
+                        </div>
+                        <div class="from-group">
+                            <label for="max-range">Maximum</label>
+                            <input type="number" id="max-range" placeholder="100" class>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="submit-modal" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" id="close-modal" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Table -->
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price (USD)</th>
+                    <th scope="col">%24h</th>
+                    <th scope="col">%1h</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/crypto.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
